@@ -1,8 +1,61 @@
-<nav>
-    {{ navigationElements[0] }}
-    {{ navigationElements[1] }}
-    {{ navigationElements[2] }}
-    {{ navigationElements[3] }}
-    {{ navigationElements[4] }}
-    {{ navigationElements[5] }}
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <a class="navbar-brand" href="#"><img class="img-fluid" src="/assets/images/Callibrity-logo-new.png"></a>
+
+   <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getAboutUsLinkText() }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getServicesLinkText() }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getPeopleLinkText() }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getCommunityLinkText() }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getCareersLinkText() }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getBlogLinkText() }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/" routerLinkActive="active">{{ getContactLinkText() }}</a>
+    </li>
+  </ul>
 </nav>
+
+
+
+<!--<nav class="navbar navbar-toggleable-sm navbar-fixed-top navbar-light bg-faded">
+  <div class="navbar navbar-default">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>-->
+
+    <!--<a routerLink="/" routerLinkActive="active"><img src="/assets/images/Callibrity-logo-new.png"></a>
+    <a routerLink="/" routerLinkActive="active">About Us</a>
+    <a routerLink="/" routerLinkActive="active">Services</a>
+    <a routerLink="/" routerLinkActive="active">People</a>
+    <a routerLink="/" routerLinkActive="active">Community</a>
+    <a routerLink="/" routerLinkActive="active">Careers</a>
+    <a routerLink="/" routerLinkActive="active">Blog</a>
+    <a routerLink="/" routerLinkActive="active">Contact</a>-->
+<!--</nav>-->

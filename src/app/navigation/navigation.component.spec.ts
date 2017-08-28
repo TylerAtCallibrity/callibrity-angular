@@ -1,14 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { NavigationComponent } from './navigation.component';
 
 describe('NavigationComponent', () => {
   let component: NavigationComponent;
   let fixture: ComponentFixture<NavigationComponent>;
+  let expected: string;
+  let got: string;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavigationComponent ]
+      declarations: [ NavigationComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -19,38 +23,66 @@ describe('NavigationComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should have a navigation element', async() => {
-    fixture = TestBed.createComponent(NavigationComponent);
-    fixture.detectChanges();
-    let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('nav')).toBeTruthy();
+  it('should have the About Us link', async() => {
+    expected = 'About Us';
+    got = NavigationComponent['ABOUT_US'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getAboutUsLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);
   });
 
-  it('should have all navigation elements', async() => {
-    fixture = TestBed.createComponent(NavigationComponent);
-    fixture.detectChanges();
-    let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('nav').textContent).toContain('About us');
-    expect(compiled.querySelector('nav').textContent).toContain('Services');
-    expect(compiled.querySelector('nav').textContent).toContain('People');
-    expect(compiled.querySelector('nav').textContent).toContain('Community');
-    expect(compiled.querySelector('nav').textContent).toContain('Careers');
-    expect(compiled.querySelector('nav').textContent).toContain('Blog');
+  it('should have the Services link', async() => {
+    expected = 'Services';
+    got = NavigationComponent['SERVICES'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getServicesLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);
   });
 
-  it('should pull navigation elements from nav object', async() => {
-    fixture = TestBed.createComponent(NavigationComponent);
-    let app  = fixture.debugElement.componentInstance;
-    expect(app.navigationElements).toBeTruthy();
-    let expectedNavigationElements = ['About us', 'Services', 'People', 'Community', 'Careers', 'Blog'];
+  it('should have the People link', async() => {
+    expected = 'People';
+    got = NavigationComponent['PEOPLE'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getPeopleLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);  });
 
-    expectEqualArrays(expectedNavigationElements, app.navigationElements);
+  it('should have the Community link', async() => {
+    expected = 'Community';
+    got = NavigationComponent['COMMUNITY'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getCommunityLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);
   });
+
+  it('should have the Careers link', async() => {
+    expected = 'Careers';
+    got = NavigationComponent['CAREERS'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getCareersLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);
+  });
+
+  it('should have the Blog link', async() => {
+    expected = 'Blog';
+    got = NavigationComponent['BLOG'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getBlogLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);  });
+
+  it('should have the Contact link', async() => {
+    expected = 'Contact';
+    got = NavigationComponent['CONTACT'];
+    let app = fixture.debugElement.nativeElement
+    expect(expected).toEqual(got);
+    expect(expected).toEqual(component.getContactLinkText());
+    expect(app.querySelector('nav').textContent).toContain(expected);
+  });
+
 });
 
-function expectEqualArrays(array1, array2){
-  expect(array1.length).toEqual(array2.length);
-    for (var i = 0; i < array1.length; i++){
-      expect(array1[i]).toEqual(array2[i]);
-    }
-}

@@ -2,6 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NavigationComponent } from './navigation/navigation.component';
 
 describe('AppComponent', () => {
@@ -12,6 +13,9 @@ describe('AppComponent', () => {
         AppComponent,
         NavigationComponent
       ],
+      schemas : [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     }).compileComponents();
   }));
 
