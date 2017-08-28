@@ -5,14 +5,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
-import { LinkComponent } from './link/link.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+
+const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    LinkComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
