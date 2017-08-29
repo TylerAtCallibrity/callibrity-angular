@@ -8,6 +8,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
+import { HomeComponent } from './home/home.component';
+import { HeroComponent } from './hero/hero.component';
 
 const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
 
@@ -17,6 +19,8 @@ const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
     NavigationComponent,
     FooterComponent,
     BodyComponent,
+    HomeComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,

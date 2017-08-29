@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BodyComponent } from './body.component';
+import { HomeComponent } from '../home/home.component';
+import { HeroComponent } from '../hero/hero.component';
 
 describe('BodyComponent', () => {
   let component: BodyComponent;
@@ -8,7 +10,9 @@ describe('BodyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BodyComponent ]
+      declarations: [ BodyComponent,
+                      HomeComponent,
+                      HeroComponent ]
     })
     .compileComponents();
   }));
@@ -23,10 +27,11 @@ describe('BodyComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be one big container for the rest of the content', () => {
+  it('should have the home component', () => {
     let app = fixture.debugElement.nativeElement;
-    let container = app.querySelector('div[class*="container"]');
+    let container = app.querySelector('app-home');
     
     expect(container).toBeTruthy();
   });
+
 });
