@@ -32,4 +32,28 @@ describe('FooterComponent', () => {
     let got = app.querySelector('div').textContent;
     expect(got).toContain(expected);
   });
+
+  it('should have a recent blogs section', () => {
+    let app = fixture.debugElement.nativeElement;
+    fixture.detectChanges();
+    let expected = "Recent blog posts:";
+    let got = app.querySelector("p[id*='recent-blog-posts']");
+
+    expect(expected).toEqual(got.textContent);
+  });
+
+  it('should have award logos', () => {
+    let app = fixture.debugElement.nativeElement;
+    fixture.detectChanges();
+    let bestPlacesImage = "bptw-2016.png";
+    let fast55Image = "fast55.png";
+    let inc5000Image = "Inc5000_colorstacked.png";
+    let gotBestPlacesImage = app.querySelector(`img[src*='${bestPlacesImage}']`);
+    let gotFast55Image = app.querySelector(`img[src*='${fast55Image}']`);
+    let gotInc5000Image = app.querySelector(`img[src*='${inc5000Image}']`);
+
+    expect(gotBestPlacesImage).toBeTruthy();
+    expect(gotFast55Image).toBeTruthy();
+    expect(gotInc5000Image).toBeTruthy();
+  });
 });

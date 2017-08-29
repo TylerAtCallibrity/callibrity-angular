@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { BodyComponent } from './body/body.component';
 
 const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
 
@@ -15,6 +16,7 @@ const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
     AppComponent,
     NavigationComponent,
     FooterComponent,
+    BodyComponent,
   ],
   imports: [
     BrowserModule,
