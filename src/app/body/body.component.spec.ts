@@ -22,4 +22,11 @@ describe('BodyComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be one big container for the rest of the content', () => {
+    let app = fixture.debugElement.nativeElement;
+    let container = app.querySelector('div[class*="container"]');
+    
+    expect(container).toBeTruthy();
+  });
 });
