@@ -26,3 +26,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## NOTE
+Currently the callibrity site is hosted for free on github pages which is powered by jekyll. Jekyll is a great tool that can be used to serve static webpages and blog contents that have been written in mark down. This is a great fit for Callibrity because of the blog and lack of server side integration and interpage dependencies. Jekyll doesn't fit well with the single page apps that frameworks such as angular and react do so well. The problem here is with the routing from one page, the current work around is to modify the 404.html page to route back to your index.html page to render your content on the page. This feels hackish.. Until there is a better solution I think that the current solution (jekyll serving static html pages) is the best route to go. 
