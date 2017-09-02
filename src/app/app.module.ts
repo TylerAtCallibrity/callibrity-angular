@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HeroComponent } from './home/hero/hero.component';
 
-const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
