@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { HeroComponent } from './home/hero/hero.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     HomeComponent,
     HeroComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
