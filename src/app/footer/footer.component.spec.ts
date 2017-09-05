@@ -26,11 +26,13 @@ describe('FooterComponent', () => {
   it('should have the copyright information', () => {
     let app = fixture.debugElement.nativeElement;
     fixture.detectChanges();
-    let expected = `Copyright 2016 Callibrity Solutions, LLC. 
+    let expected = `Callibrity Solutions, LLC.
                     9462 Towne Square Ave
                     Blue Ash, OH 45242`;
-    let got = app.querySelector('div').textContent;
-    expect(got).toContain(expected);
+    let got = app.querySelector("p[id*='address']").textContent;
+    expect(got).toContain("Callibrity Solutions, LLC.");
+    expect(got).toContain("9462 Towne Square Ave");
+    expect(got).toContain("Blue Ash, OH 45242");
   });
 
   it('should have a recent blogs section', () => {
