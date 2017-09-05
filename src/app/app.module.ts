@@ -1,31 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { NavigationComponent } from './navigation/navigation.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
-import { BodyComponent } from './body/body.component';
-import { HomeComponent } from './home/home.component';
-import { HeroComponent } from './hero/hero.component';
 
-const appRoutes: Routes = [ {path: '/', component: AppComponent} ]
+import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { HeroComponent } from './home/hero/hero.component';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { PeopleComponent } from './people/people.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     FooterComponent,
-    BodyComponent,
     HomeComponent,
     HeroComponent,
+    AboutComponent,
+    ServicesComponent,
+    PeopleComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

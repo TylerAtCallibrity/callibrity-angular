@@ -1,22 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
-import { HeroComponent } from './hero/hero.component';
+import { PeopleComponent } from './people.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('PeopleComponent', () => {
+  let component: PeopleComponent;
+  let fixture: ComponentFixture<PeopleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent,
-                      HeroComponent ]
+      declarations: [ PeopleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(PeopleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -24,5 +22,4 @@ describe('HomeComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-
 });
